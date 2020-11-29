@@ -1,7 +1,8 @@
 bin_PROGRAMS = helloworld signed test_format derived_types first_program \
 sample_input more_sample_input ifelse_example doloop fileio \
-arrays_example
+arrays_example subroutine_example
 
+subroutine_example_SOURCES = subroutine_example.f90
 arrays_example_SOURCES = arrays_example.f90
 fileio_SOURCES = fileio.f90
 doloop_SOURCES = doloop.f90
