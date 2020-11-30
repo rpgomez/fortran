@@ -10,8 +10,13 @@ AM_INIT_AUTOMAKE([foreign])
 # Checks for programs.
 AC_PROG_CC
 AC_PROG_FC
-# Checks for libraries.
+AC_CHECK_PROG(MPIF90,mpif90,YES)
 
+# Checks for libraries.
+AC_CHECK_LIB(caf_mpich,main,[AC_SUBST(CAF_MPICH,[YES])])
+
+AM_CONDITIONAL([COND1], [test x$MPIF90 = xYES ])
+AM_CONDITIONAL([COND2], [test x$CAF_MPICH = xYES ])
 # Checks for header files.
 AC_CHECK_HEADERS([inttypes.h])
 

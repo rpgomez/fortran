@@ -2,6 +2,17 @@ bin_PROGRAMS = helloworld signed test_format derived_types first_program \
 sample_input more_sample_input ifelse_example doloop fileio \
 arrays_example subroutine_example
 
+if COND1
+if COND2
+ bin_PROGRAMS += coarray_example
+endif
+endif
+
+coarray_example_SOURCES = coarray_example.f90
+coarray_example_LDADD = -lcaf_mpich
+coarray_example_FCFLAGS = -fcoarray=lib
+#coarray_example_FCLINK = mpif90 -o $@
+
 subroutine_example_SOURCES = subroutine_example.f90
 arrays_example_SOURCES = arrays_example.f90
 fileio_SOURCES = fileio.f90
