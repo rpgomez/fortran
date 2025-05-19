@@ -17,7 +17,7 @@ in your home directory
 ```{bash}
 ./configure --prefif=$HOME/bin
 ```
-If you run the configure script with the *--help* switch you should be an extensive collection of build and installation options, such as selecting the choice of Fortran compiler for example.
+If you run the configure script with the *--help* switch you should see an extensive collection of build and installation options, such as selecting the choice of Fortran compiler for example.
 4. Compile the code using the *make* utility:
 ```{bash}
 make
